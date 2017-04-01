@@ -2,22 +2,111 @@
 {% load staticfiles %}
 <html lang="pt-br">
 <head>
-	<title>Analist</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>Bt Analist</title>
+	
+	<meta charset="utf-8"/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>-->
+    <link rel="stylesheet" href="{% static 'css\css\bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css\css\bootstrap-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css\css\style.css' %}"/>
+
+
 </head>
 <body>
-    <div class="page-header">
-        <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
+	<div class="container-fluid">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="static\css\img\brand.png">
+              </a>
         </div>
+			<div class="row">
+				<div class="col-md-4">
+
+					<ul>
+                        
+						<li><a href="#">INICIO</a></li>
+						<li><a href="#">SOBRE</a></li>
+						<li><a href="#">PREÇOS</a></li>
+					</ul>
+				</div>
+			</div>
+	</nav>
     </div>
+    
+	<header>
+		<div class="cabecalho">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Analist</h1>
+					<p>Conecte-se aos jogos!</p>
+					<a class="botao" href="#">SIGN IN</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="postagem">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Postagens - </h1>
+				{% block content%}
+                {% endblock %}
+			</div>
+		</div>
+	</section>
+	<section class="sobre">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Sobre - </h1>
+					<div class="imagens">
+						<div>
+				            <img src="static\css\img\configs.png" alt="engrenagens">
+				            <h3>Serviço de qualidade!</h3>
+				            <p>Opniões totalmente claras.</p>
+				        </div>
+				        <div>
+				            <img src="static\css\img\hospedagem.png" alt="hospedagem">
+				            <h3>Hospedagem moderna!</h3>
+				            <p>Não deixará ninguém na mão.</p>
+				            
+				        </div>
+				        <div>
+				            <img src="static\css\img\site.png" alt="site">
+				            <h3>Site gratuíto!</h3>
+				            <p> E totalmente interativo.</p>
+				        </div>
+				        <div>
+				            <img src="static\css\img\coracao.png" alt="coracao">
+				            <h3>Feito com carinho!</h3>
+				            <p>Criado por nerds, para nerds</p>
+				        </div>
+				    </div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="rodape">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="redes">
+						<a href="#">Facebook</a>
+						<a href="#">Twitter</a>
+						<a href="#">Instagram</a>
+						<a href="#">Youtube</a>
+					</div>
+					<p>Copyright 2017</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+		
+	</div>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
