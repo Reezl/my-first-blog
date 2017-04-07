@@ -7,7 +7,9 @@
 	<meta charset="utf-8"/>
 	<meta name="description" content=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!--
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700|Pacifico' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>-->
@@ -22,7 +24,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="navbar-header">
               <a class="navbar-brand" href="#">
-                <img alt="Brand" src="static\css\img\brand.png">
+                <img alt="Brand" src="{% static 'css/img/brand.png' %}"/>
               </a>
         </div>
 			<div class="row">
@@ -37,7 +39,7 @@
 				</div>
 			</div>
 	</nav>
-    </div>
+    
     
 	<header>
 		<div class="cabecalho">
@@ -53,7 +55,8 @@
 	<section class="postagem">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>Postagens - </h1>
+				<h1 class="titulo">Postagens - </h1>
+                <a href="{% url 'blog.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 				{% block content%}
                 {% endblock %}
 			</div>
@@ -65,23 +68,23 @@
 				<h1>Sobre - </h1>
 					<div class="imagens">
 						<div>
-				            <img src="static\css\img\configs.png" alt="engrenagens">
+				            <img src=" {% static 'css\img\configs.png' %}" alt="engrenagens">
 				            <h3>Serviço de qualidade!</h3>
 				            <p>Opniões totalmente claras.</p>
 				        </div>
 				        <div>
-				            <img src="static\css\img\hospedagem.png" alt="hospedagem">
+				            <img src="{% static 'css\img\hospedagem.png' %}" alt="hospedagem">
 				            <h3>Hospedagem moderna!</h3>
 				            <p>Não deixará ninguém na mão.</p>
 				            
 				        </div>
 				        <div>
-				            <img src="static\css\img\site.png" alt="site">
+				            <img src="{% static 'css\img\site.png' %}" alt="site">
 				            <h3>Site gratuíto!</h3>
 				            <p> E totalmente interativo.</p>
 				        </div>
 				        <div>
-				            <img src="static\css\img\coracao.png" alt="coracao">
+				            <img src="{% static 'css\img\coracao.png' %}" alt="coracao">
 				            <h3>Feito com carinho!</h3>
 				            <p>Criado por nerds, para nerds</p>
 				        </div>
@@ -107,6 +110,6 @@
 	</footer>
 		
 	</div>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
 </body>
 </html>
